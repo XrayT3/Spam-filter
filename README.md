@@ -1,15 +1,15 @@
 # Spam-filter
-Program filters emails and can learning on the other emails
+Program filters emails and can learn on other emails
 
-File `utils.py` gets address of file with information which emails are spam and which are not.  
-Format of this file: `name OK` or `name SPAM`. Every email on the own line.  
-Result of `utils.py` is dictionary, where key is name of email and value is `OK` or `SPAM`
+File `utils.py` gets address of the file with information about which email is spam and which is not.  
+Format of this file: `name OK` or `name SPAM`. Every email is on new line.  
+Result of `utils.py` is dictionary, where key is the name of the email and the value is `OK` or `SPAM`
 
-File `corpus.py` gets directory of emails and return array of tuples.  
-Tuples have name of email and his body. Example (name, body).
+File `corpus.py` gets directory of emails and returns array of tuples.  
+Tuples contain name of the email and its body. Example (name, body).
 
-File `trainingcorpus.py` implements learning function. Can count spam/ham emails, count bad and good words. It help in the future to make decision, bad or good email.
+File `trainingcorpus.py` implements learning function. The function can count spam/ham emails, count bad and good words. It helps to determine later whether an email is good or bad.
 
 Main file is `filter.py`.  
-Function `train` can learning, but program can work without this.
-Function `test` gets directory of emails and make file `prediction.txt` with result.
+Function `train` can learn, but the program can work without it.
+Function `test` gets directory of emails and creates file `prediction.txt` with the result.
